@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.5d8f9ecc.chunk.css",
+    "main.js": "/static/js/main.7a044918.chunk.js",
+    "main.js.map": "/static/js/main.7a044918.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.a29335d3.js",
+    "runtime-main.js.map": "/static/js/runtime-main.a29335d3.js.map",
+    "static/css/2.4c67b939.chunk.css": "/static/css/2.4c67b939.chunk.css",
+    "static/js/2.96576e5b.chunk.js": "/static/js/2.96576e5b.chunk.js",
+    "static/js/2.96576e5b.chunk.js.map": "/static/js/2.96576e5b.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.4c67b939.chunk.css.map": "/static/css/2.4c67b939.chunk.css.map",
+    "static/css/main.5d8f9ecc.chunk.css.map": "/static/css/main.5d8f9ecc.chunk.css.map",
+    "static/js/2.96576e5b.chunk.js.LICENSE.txt": "/static/js/2.96576e5b.chunk.js.LICENSE.txt",
+    "static/media/brand.d9eece5c.png": "/static/media/brand.d9eece5c.png",
+    "static/media/google.206228ae.png": "/static/media/google.206228ae.png",
+    "static/media/index.css": "/static/media/icomoon.f01d8b70.svg",
+    "static/media/platziVideo.45f59cc7.png": "/static/media/platziVideo.45f59cc7.png",
+    "static/media/rickAndMorty.c910e8db.png": "/static/media/rickAndMorty.c910e8db.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a29335d3.js",
+    "static/css/2.4c67b939.chunk.css",
+    "static/js/2.96576e5b.chunk.js",
+    "static/css/main.5d8f9ecc.chunk.css",
+    "static/js/main.7a044918.chunk.js"
+  ]
+}
