@@ -1,0 +1,32 @@
+{
+  "name": "dashboard-example",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.13.6",
+    "@nuxtjs/pwa": "^3.3.5",
+    "core-js": "^3.15.1",
+    "crumb-scss": "^1.4.4",
+    "gh-pages": "^3.2.3",
+    "nuxt": "^2.15.7",
+    "swiper": "^6.8.1",
+    "vue-awesome-swiper": "^4.1.1",
+    "vue-lottie": "^0.2.1",
+    "vuelidate": "^0.7.6",
+    "vuetify": "^2.5.5"
+  },
+  "devDependencies": {
+    "@nuxtjs/vuetify": "^1.12.1",
+    "fibers": "^5.0.0",
+    "push-dir": "^0.4.1",
+    "sass": "^1.42.1",
+    "sass-loader": "^10.2.0"
+  }
+}

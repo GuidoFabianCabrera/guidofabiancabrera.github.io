@@ -1,0 +1,63 @@
+// colors
+$color_primary: #00b3a9;
+$color_secondary: #fff;
+
+$color_success: #fff;
+$color_warning: #fff;
+$color_error: #fff;
+$color_info: #fff;
+$color_dark: #082a36;
+$color_light: #ffffff;
+$color_grey: #fff;
+
+$theme_colors: (
+  primary: $color_primary,
+  secondary: $color_secondary,
+  success: $color_success,
+  warning: $color_warning,
+  error: $color_error,
+  info: $color_info,
+  light: $color_light,
+  dark: $color_dark
+);
+
+// breakpoints
+$breakpoints: (
+  sm: 640px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px,
+  xxl: 1536px,
+  xxxl: 1792px
+);
+// font_family
+// $font_1: cgMainText, sans-serif;
+$font_1: "Inter", sans-serif;
+$font_2: sans-serif, serif;
+
+// fonts
+$fonts: (
+  1: $font_1,
+  2: $font_2
+);
+
+// aspect-ratios
+$aspect_ratios: ((21, 9), (16, 9), (9, 16), (4, 3));
+
+$container_name: custom_container;
+
+// name|has responsive?|is active?
+$utilities: (
+  (background_color, false, true),
+  (color, false, true),
+  (list, false, true),
+  (object_fit, false, true),
+  (object_position, false, true),
+  (display, true, true),
+  (aspect_ratio, false, true),
+  (font_family, false, true)
+);
+
+$container_default: xxl;
+
+@import "./../../node_modules/crumb-scss/src/variables";

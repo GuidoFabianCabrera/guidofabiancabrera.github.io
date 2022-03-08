@@ -1,0 +1,152 @@
+{
+  "SectionHero": {
+    "name": "Guido Fabian Cabrera",
+    "image": "images/picture.png",
+    "working": false,
+    "job": "Desarrollador frontend",
+    "cvUrl": "https://www.canva.com/design/DAEcCV8W_v0/CyeQa2CiGdac7_c4-15ccg/view?utm_content=DAEcCV8W_v0&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton"
+  },
+  "SectionInformation": {
+    "items": [
+      { "title": "Ubicación", "description": "Argentina, Corrientes" },
+      { "title": "Seniority", "description": "Trainee/Junior" },
+      {
+        "title": "Adentrandome en",
+        "logos": ["images/nextjs.png", "images/vue.png", "images/nuxtjs.png"]
+      },
+      { "title": "Trabajando en", "form": "Nombre de tu empresa" }
+    ]
+  },
+  "SectionAboutMe": {
+    "text": "Actualmente estudio desarrollo frontend y en estos momentos me encuentro aplicando mis conocimientos en el desarrollo de páginas web responsivas. Mi objetivo principal es continuar aprendiendo para seguir formándome constantemente y desarrollarme profesionalmente."
+  },
+  "SectionProjects": {
+    "seeMoreUrl": "https://github.com/GuidoFabianCabrera",
+    "items": [
+      {
+        "title": "TitleDAO",
+        "date": "2021 - 2022",
+        "description": "Maquetacion de TitleDAO con nuxtjs utilizando sass, aplicacion web de sorteo de casas en blockchain",
+        "technology": [
+          { "name": "nuxtjs", "color": "#00B87C" },
+          { "name": "javascript", "color": "#d59700" },
+          { "name": "sass", "color": "#CF649A" },
+          { "name": "vuetifyjs", "color": "#7BC6FF" }
+        ],
+
+        "project": "https://www.titledao.xyz"
+      },
+      {
+        "title": "Comandos",
+        "date": "2022 - 2022",
+        "description": "Maquetacion de portafolio de comandos diseñada en Zeplin, desarrollada en NextJs",
+        "technology": [
+          { "name": "nextjs", "color": "#808080" },
+          { "name": "javascript", "color": "#d59700" },
+          { "name": "zeplin", "color": "#F89536" }
+        ],
+        "project": "https://comandos.me"
+      },
+      {
+        "title": "WAX NFT",
+        "date": "2022 - 2022",
+        "description": "Maquetacion del diseño responsivo de The World Asset Exchange (WAX), plataforma de blockchain, desarrollada en Nuxtjs utilizando Sass y Vuetify",
+        "technology": [
+          { "name": "nuxtjs", "color": "#00B87C" },
+          { "name": "javascript", "color": "#d59700" },
+          { "name": "sass", "color": "#CF649A" },
+          { "name": "vuetifyjs", "color": "#7BC6FF" }
+        ],
+        "repository": "https://github.com/GuidoFabianCabrera/wax-io/",
+        "project": "https://guidofabiancabrera.github.io/wax-io"
+      },
+      {
+        "title": "Chiliz $CHZ",
+        "date": "2021 - 2021",
+        "description": "Maquetacion del diseño responsivo de Chiliz, criptomoneda, desarrollada en ReactJs utilizando Sass",
+        "technology": [
+          { "name": "reactjs", "color": "#61DAFB" },
+          { "name": "javascript", "color": "#d59700" },
+          { "name": "sass", "color": "#CF649A" }
+        ],
+        "repository": "https://github.com/GuidoFabianCabrera/chiliz/",
+        "project": "https://guidofabiancabrera.github.io/chiliz"
+      },
+      {
+        "title": "The Oasis Protocol Foundation",
+        "date": "2022 - 2022",
+        "description": "Maquetacion del diseño responsivo de The Oasis Protocol Foundation, plataforma de blockchain, desarrollada en Nuxtjs utilizando Sass y Vuetify",
+        "technology": [
+          { "name": "nuxtjs", "color": "#00B87C" },
+          { "name": "javascript", "color": "#d59700" },
+          { "name": "sass", "color": "#CF649A" },
+          { "name": "vuetifyjs", "color": "#7BC6FF" }
+        ],
+        "repository": "https://github.com/GuidoFabianCabrera/oasisprotocol",
+        "project": "https://guidofabiancabrera.github.io/oasisprotocol/"
+      },
+      {
+        "title": "Gala Games",
+        "date": "2022 - 2022",
+        "description": "Maquetacion del diseño responsivo de Gala Games, plataforma de blockchain y NFTs, desarrollada en Nuxtjs utilizando Sass y Vuetify",
+        "technology": [
+          { "name": "nuxtjs", "color": "#00B87C" },
+          { "name": "javascript", "color": "#d59700" },
+          { "name": "sass", "color": "#CF649A" },
+          { "name": "vuetifyjs", "color": "#7BC6FF" }
+        ],
+        "repository": "https://github.com/GuidoFabianCabrera/gala",
+        "project": "https://guidofabiancabrera.github.io/gala/"
+      }
+    ]
+  },
+  "SectionTechnologies": {
+    "logos": [
+      "mdi-language-html5",
+      "mdi-language-css3",
+      "mdi-language-javascript",
+      "mdi-react",
+      "mdi-vuejs",
+      "mdi-git",
+      "mdi-sass"
+    ]
+  },
+  "SectionEducation": {
+    "items": [
+      {
+        "image": "images/platzi.png",
+        "date": "Marzo 2021 - Mayo 2021",
+        "learning": "Arquitectura Frontend"
+      },
+      {
+        "image": "images/platzi.png",
+        "date": "Mayo 2021 - Julio 2021",
+        "learning": "JavaScript"
+      },
+      {
+        "image": "images/platzi.png",
+        "date": "Julio 2021 - Noviembre 2021",
+        "learning": "Frontend con React.js"
+      }
+    ]
+  },
+  "SectionFooter": {
+    "items": [
+      {
+        "name": "Linkedin",
+        "icon": "images/linkedin.svg",
+        "url": "https://www.linkedin.com/in/guido-fabian-cabrera-179844203/"
+      },
+      {
+        "name": "Gmail",
+        "icon": "images/google.svg",
+        "url": "mailto:guidofabiancabrera10@gmail.com"
+      },
+      {
+        "name": "Más info",
+        "icon": "images/documento.svg",
+        "url": "https://www.canva.com/design/DAEcCV8W_v0/CyeQa2CiGdac7_c4-15ccg/view?utm_content=DAEcCV8W_v0&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton"
+      }
+    ]
+  }
+}
