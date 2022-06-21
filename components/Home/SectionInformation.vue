@@ -42,7 +42,6 @@ export default {
   },
   methods: {
     submitForm(e) {
-      console.log(e);
       this.showText = true;
     }
   },

@@ -106,7 +106,6 @@ export default {
     font-weight: 800;
     text-transform: uppercase;
     transition: 0.15s ease-in-out;
-    cursor: pointer;
   }
 
   .project_card__item_card:hover {

@@ -97,6 +97,66 @@
         ],
         "repository": "https://github.com/GuidoFabianCabrera/gala",
         "project": "https://guidofabiancabrera.github.io/gala/"
+      },
+      {
+        "title": "Metamask Quiz",
+        "date": "2022 - 2022",
+        "description": "Aplicación web que se vincula con metamask y al hacer un quiz se ejecuta un contrato y muestra el total de tokens objetivos",
+        "technology": [
+          { "name": "nextjs", "color": "#808080" },
+          { "name": "javascript", "color": "#d59700" },
+          { "name": "axios", "color": "#671ddf" },
+          { "name": "web3", "color": "#ef6830" },
+          { "name": "sass", "color": "#CF649A" },
+          { "name": "material-ui", "color": "#3399ff" }
+        ],
+        "repository": "https://github.com/GuidoFabianCabrera/metamask-quiz",
+        "project": "https://metamask-quiz.vercel.app/"
+      },
+      {
+        "title": "Multi Timer",
+        "date": "2022 - 2022",
+        "description": "Aplicación web para controlar el tiempo con multiples temporizadores con NextJs",
+        "technology": [
+          { "name": "nextjs", "color": "#808080" },
+          { "name": "javascript", "color": "#d59700" },
+          { "name": "formik", "color": "#172b4d" },
+          { "name": "yup", "color": "#0b7e9e" },
+          { "name": "sass", "color": "#CF649A" },
+          { "name": "material-ui", "color": "#3399ff" }
+        ],
+        "repository": "https://github.com/GuidoFabianCabrera/timers",
+        "project": "https://timers-tau.vercel.app/"
+      },
+      {
+        "title": "Movies",
+        "date": "2022 - 2022",
+        "description": "Aplicación web muestra peliculas de la api creada en Nest.js",
+        "technology": [
+          { "name": "reactjs", "color": "#61DAFB" },
+          { "name": "javascript", "color": "#d59700" },
+          { "name": "axios", "color": "#671ddf" },
+          { "name": "sass", "color": "#CF649A" },
+          { "name": "material-ui", "color": "#3399ff" },
+          { "name": "nestjs", "color": "#e0234e" }
+        ],
+        "repository": "https://github.com/GuidoFabianCabrera/movies",
+        "project": "https://movies-steel.vercel.app/"
+      },
+      {
+        "title": "Dashboard",
+        "date": "2022 - 2022",
+        "description": "Aplicación web con login simple y CRUD hacia la base de datos creada en Nest.js",
+        "technology": [
+          { "name": "nuxtjs", "color": "#00B87C" },
+          { "name": "javascript", "color": "#d59700" },
+          { "name": "axios", "color": "#671ddf" },
+          { "name": "sass", "color": "#CF649A" },
+          { "name": "vuetifyjs", "color": "#7BC6FF" },
+          { "name": "nestjs", "color": "#e0234e" }
+        ],
+        "repository": "https://github.com/GuidoFabianCabrera/dashboard",
+        "project": "https://guidofabiancabrera.github.io/dashboard/login/"
       }
     ]
   },

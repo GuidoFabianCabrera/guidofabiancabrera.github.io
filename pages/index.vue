@@ -42,9 +42,6 @@ export default {
     return {
       data: Data
     };
-  },
-  mounted() {
-    console.log("hola");
   }
 };
 </script>
