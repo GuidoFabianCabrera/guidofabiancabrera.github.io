@@ -9,7 +9,7 @@
   "SectionInformation": {
     "items": [
       { "title": "Ubicación", "description": "Argentina, Corrientes" },
-      { "title": "Seniority", "description": "Trainee/Junior" },
+      { "title": "Seniority", "description": "Junior/Semi Senior" },
       {
         "title": "Adentrandome en",
         "logos": ["images/nextjs.png", "images/vue.png", "images/nuxtjs.png"]
