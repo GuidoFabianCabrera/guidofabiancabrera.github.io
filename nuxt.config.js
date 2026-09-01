@@ -66,7 +66,7 @@ export default {
   css: ["@/assets/scss/styles.scss"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ["@/plugins/vuelidate"],
+  plugins: ["@/plugins/vuelidate", "@/plugins/lottie.client.js"],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: false,

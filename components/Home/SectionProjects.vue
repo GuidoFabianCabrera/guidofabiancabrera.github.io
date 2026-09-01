@@ -3,7 +3,9 @@
     <div class="projects__container custom_container">
       <h4 class="projects__title">Proyectos</h4>
       <div class="projects__logo">
-        <Lottie style="width: 60px; height: 60px;" :options="lottieOptions" />
+        <client-only>
+          <Lottie style="width: 60px; height: 60px;" :options="lottieOptions" />
+        </client-only>
       </div>
       <div class="projects__list">
         <SharedProjectCard
@@ -30,7 +32,6 @@
 
 <script>
 import SharedProjectCard from "@/components/Shared/ProjectCard";
-import Lottie from "vue-lottie/src/lottie.vue";
 import * as animationData from "~/static/ReactAnimation.json";
 
 export default {
@@ -38,8 +39,7 @@ export default {
     data: Object
   },
   components: {
-    SharedProjectCard,
-    Lottie
+    SharedProjectCard
   },
   data() {
     return {

@@ -18,12 +18,14 @@
       </div>
       <p class="footer__learn">¡Muchas gracias por leer!</p>
       <div class="footer__click" v-show="hidenAnim">
-        <Lottie
-          class="footer__animation"
-          style="width:300px;height:240px"
-          :options="lottieOptions"
-          v-on:animCreated="handleAnimation"
-        />
+        <client-only>
+          <Lottie
+            class="footer__animation"
+            style="width:300px;height:240px"
+            :options="lottieOptions"
+            v-on:animCreated="handleAnimation"
+          />
+        </client-only>
       </div>
       <v-btn
         class="footer__button"
@@ -39,14 +41,10 @@
 </template>
 
 <script>
-import Lottie from "vue-lottie/src/lottie.vue";
 import * as animationData from "~/static/FooterAnimation.json";
 
 export default {
   props: { data: Object },
-  components: {
-    Lottie
-  },
   data() {
     return {
       hidenAnim: false,

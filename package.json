@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate",
+    "dev": "cross-env NODE_OPTIONS=--openssl-legacy-provider nuxt",
+    "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider nuxt build",
+    "start": "cross-env NODE_OPTIONS=--openssl-legacy-provider nuxt start",
+    "generate": "cross-env NODE_OPTIONS=--openssl-legacy-provider nuxt generate",
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "dependencies": {
@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "@nuxtjs/vuetify": "^1.12.1",
-    "fibers": "^5.0.0",
+    "cross-env": "^10.1.0",
     "push-dir": "^0.4.1",
     "sass": "^1.42.1",
     "sass-loader": "^10.2.0"
