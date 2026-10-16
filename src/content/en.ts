@@ -105,24 +105,24 @@ export const en: Content = {
         name: "Mi facu",
         summary:
           "Dashboard that brings the SIU-Guaraní system and the Moodle campus of the UNNE (a university in Argentina) together on one screen: assignments, grades, subjects and enrollments. Its own backend reads Moodle through its API and Guaraní in read-only mode (React, Node.js and Express). Personal, unofficial project; a UNNE account is needed to try it.",
-        href: "https://mi-facu.vercel.app",
+        href: "https://facu.guidofc.com.ar",
       },
       {
         name: "Quorum",
         summary: "Web game based on the board game Secret Hitler.",
-        href: "https://quorum-seven-plum.vercel.app",
+        href: "https://quorum.guidofc.com.ar",
       },
       {
         name: "Server album",
         summary:
           "Website for a Minecraft server among friends: screenshot album with likes and comments, and a 3D map of the world.",
-        href: "https://album-del-server.vercel.app",
+        href: "https://album.guidofc.com.ar",
       },
       {
         name: "Taller de Yeso",
         summary:
           "Web app for a plaster workshop: mold catalog, plaster and water calculator, prices and profit, production tracking and drying timers.",
-        href: "https://taller-yeso.vercel.app",
+        href: "https://yeso.guidofc.com.ar",
       },
     ],
   },
