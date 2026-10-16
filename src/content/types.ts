@@ -79,5 +79,5 @@ export const SITE = {
   phone: "+54 9 379 401-1013",
   linkedin: "https://www.linkedin.com/in/guidofc/",
   github: "https://github.com/GuidoFabianCabrera",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://guidofabiancabrera.github.io",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://guidofc.com.ar",
 };

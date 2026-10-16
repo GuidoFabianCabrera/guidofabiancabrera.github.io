@@ -37,4 +37,4 @@ Estos PDF **no llevan teléfono**, porque están publicados en una web abierta. 
 
 Al subir a `main`, GitHub Actions construye el sitio y lo publica en la rama `gh-pages`, que es de donde GitHub Pages lo sirve (`.github/workflows/deploy.yml`).
 
-Para usar el dominio propio: agregar `public/CNAME` con el dominio, cambiar `NEXT_PUBLIC_SITE_URL` en el workflow y configurar el DNS.
+El sitio se sirve en `https://guidofc.com.ar` (`public/CNAME`, `NEXT_PUBLIC_SITE_URL` en el workflow). El DNS está en Cloudflare, en modo solo DNS.

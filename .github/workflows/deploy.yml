@@ -21,7 +21,7 @@ jobs:
       - run: pnpm install --frozen-lockfile
       - run: pnpm build
         env:
-          NEXT_PUBLIC_SITE_URL: https://guidofabiancabrera.github.io
+          NEXT_PUBLIC_SITE_URL: https://guidofc.com.ar
       # El sitio se sirve desde la rama gh-pages, igual que antes.
       - uses: peaceiris/actions-gh-pages@v4
         with:
