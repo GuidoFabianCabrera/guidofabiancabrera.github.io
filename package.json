@@ -1,32 +1,27 @@
 {
-  "name": "dashboard-example",
-  "version": "1.0.0",
+  "name": "guidofabiancabrera.github.io",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "cross-env NODE_OPTIONS=--openssl-legacy-provider nuxt",
-    "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider nuxt build",
-    "start": "cross-env NODE_OPTIONS=--openssl-legacy-provider nuxt start",
-    "generate": "cross-env NODE_OPTIONS=--openssl-legacy-provider nuxt generate",
-    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.13.6",
-    "@nuxtjs/pwa": "^3.3.5",
-    "core-js": "^3.15.1",
-    "crumb-scss": "^1.4.4",
-    "gh-pages": "^3.2.3",
-    "nuxt": "^2.15.7",
-    "swiper": "^6.8.1",
-    "vue-awesome-swiper": "^4.1.1",
-    "vue-lottie": "^0.2.1",
-    "vuelidate": "^0.7.6",
-    "vuetify": "^2.5.5"
+    "next": "16.4.1",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
   },
   "devDependencies": {
-    "@nuxtjs/vuetify": "^1.12.1",
-    "cross-env": "^10.1.0",
-    "push-dir": "^0.4.1",
-    "sass": "^1.42.1",
-    "sass-loader": "^10.2.0"
-  }
+    "@tailwindcss/turbopack": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.4.1",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  },
+  "packageManager": "pnpm@11.20.0"
 }

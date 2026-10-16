@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #fafaf9;
+  --surface: #ffffff;
+  --text: #1c1917;
+  --muted: #57534e;
+  --line: #e7e5e4;
+  --accent: #1d4ed8;
+  --accent-fg: #ffffff;
+  --accent-soft: #e0e7ff;
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b0d10;
+    --surface: #12151a;
+    --text: #e7e9ee;
+    --muted: #9aa3b2;
+    --line: #232a33;
+    --accent: #8ab0ff;
+    --accent-fg: #0b0d10;
+    --accent-soft: #1a2542;
+  }
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-fg: var(--accent-fg);
+  --color-accent-soft: var(--accent-soft);
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4.5rem;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* CV imprimible: siempre claro, una sola columna, texto real para los filtros de reclutamiento. */
+.cv-page {
+  background: #fff;
+  color: #111;
+  color-scheme: light;
+}
+
+@page {
+  size: A4;
+  margin: 13mm 14mm;
+}
+
+@media print {
+  body {
+    background: #fff !important;
+  }
+  .cv-page {
+    padding: 0 !important;
+  }
+}
