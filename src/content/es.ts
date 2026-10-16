@@ -111,8 +111,8 @@ export const es: Content = {
       },
       {
         name: "Quorum",
-        summary: "Juego web basado en el juego de mesa Secret Hitler, con votación anónima y resultados en tiempo real.",
-        href: "https://quorum.vercel.app",
+        summary: "Juego web basado en el juego de mesa Secret Hitler.",
+        href: "https://quorum-seven-plum.vercel.app",
       },
       {
         name: "Álbum del server",
