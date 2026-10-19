@@ -9,6 +9,10 @@
   --accent: #1d4ed8;
   --accent-fg: #ffffff;
   --accent-soft: #e0e7ff;
+  --fx-a: #a5b4fc;
+  --fx-b: #f0abfc;
+  --fx-c: #99f6e4;
+  --fx-opacity: 0.4;
   color-scheme: light dark;
 }
 
@@ -22,6 +26,10 @@
     --accent: #8ab0ff;
     --accent-fg: #0b0d10;
     --accent-soft: #1a2542;
+    --fx-a: #3b5bdb;
+    --fx-b: #7048e8;
+    --fx-c: #0ca678;
+    --fx-opacity: 0.14;
   }
 }
 
@@ -137,5 +145,71 @@ body {
   }
   .cv-page {
     padding: 0 !important;
+  }
+}
+
+/* Fondo animado: aurora. Detrás de todo, sin interacción, fuera del CV y de la impresión. */
+.bg-fx {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.bg-fx-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
+  opacity: var(--fx-opacity);
+  will-change: transform;
+}
+
+.bg-fx-a {
+  width: 34rem;
+  height: 34rem;
+  left: -6%;
+  top: -10%;
+  background: var(--fx-a);
+  animation: fx-a 26s ease-in-out infinite;
+}
+
+.bg-fx-b {
+  width: 32rem;
+  height: 32rem;
+  right: -8%;
+  top: 25%;
+  background: var(--fx-b);
+  animation: fx-b 32s ease-in-out infinite;
+}
+
+.bg-fx-c {
+  width: 30rem;
+  height: 30rem;
+  left: 30%;
+  bottom: -20%;
+  background: var(--fx-c);
+  animation: fx-c 38s ease-in-out infinite;
+}
+
+@keyframes fx-a {
+  50% { transform: translate(8rem, 4rem) scale(1.2); }
+}
+@keyframes fx-b {
+  50% { transform: translate(-9rem, -3rem) scale(0.9); }
+}
+@keyframes fx-c {
+  50% { transform: translate(-5rem, 4rem) scale(1.15); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bg-fx-blob {
+    animation: none;
+  }
+}
+
+@media print {
+  .bg-fx {
+    display: none;
   }
 }

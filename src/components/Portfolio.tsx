@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Background } from "@/components/Background";
 import { SITE, type Content, type Project, type Role } from "@/content/types";
 
 const linkClass =
@@ -185,6 +186,7 @@ function ProjectCard({ p, techLabel }: { p: Project; techLabel: string }) {
 export function Portfolio({ c }: { c: Content }) {
   return (
     <>
+      <Background />
       <a
         href="#about"
         className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-20 focus:rounded-md focus:bg-accent focus:px-3 focus:py-2 focus:text-accent-fg"
