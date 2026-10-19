@@ -61,6 +61,64 @@ body {
   border-radius: 4px;
 }
 
+::selection {
+  background: var(--accent-soft);
+}
+
+/* Movimiento sutil: todo corto (150-500 ms) y apagado con prefers-reduced-motion. */
+@media (prefers-reduced-motion: no-preference) {
+  /* Subrayado que se dibuja en los links del menú. */
+  .nav-link {
+    background: linear-gradient(currentColor, currentColor) 0 100% / 0 1px no-repeat;
+    padding-bottom: 2px;
+    transition:
+      background-size 200ms ease-out,
+      color 150ms;
+  }
+  .nav-link:hover {
+    background-size: 100% 1px;
+  }
+
+  /* Entrada del hero, una sola vez y escalonada. */
+  .hero-in > * {
+    animation: fade-up 500ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+  .hero-in > :nth-child(2) {
+    animation-delay: 70ms;
+  }
+  .hero-in > :nth-child(3) {
+    animation-delay: 140ms;
+  }
+
+  /* Cada sección aparece al entrar en pantalla. Solo CSS: si el navegador no soporta
+     animation-timeline (Firefox por ahora), queda visible sin efecto. */
+  @supports (animation-timeline: view()) {
+    .reveal {
+      animation: fade-up linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 40%;
+    }
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* En una lista, al pasar el mouse sobre una fila las demás se apagan un poco. Solo con mouse. */
+@media (hover: hover) {
+  .dim-siblings:hover > li:not(:hover) {
+    opacity: 0.55;
+  }
+}
+
 /* CV imprimible: siempre claro, una sola columna, texto real para los filtros de reclutamiento. */
 .cv-page {
   background: #fff;

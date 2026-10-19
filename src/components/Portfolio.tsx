@@ -3,11 +3,26 @@ import Link from "next/link";
 import { SITE, type Content, type Project, type Role } from "@/content/types";
 
 const linkClass =
-  "text-accent underline decoration-accent/40 underline-offset-4 transition-colors hover:decoration-accent";
+  "group/link text-accent underline decoration-accent/40 underline-offset-4 transition-colors hover:decoration-accent";
+
+const btnBase = "rounded-lg px-4 py-2.5 text-sm font-semibold transition duration-150 active:scale-[0.98]";
+const btnPrimary = `${btnBase} bg-accent text-accent-fg hover:-translate-y-px hover:shadow-md hover:shadow-accent/30`;
+const btnSecondary = `${btnBase} border border-line bg-surface hover:-translate-y-px hover:border-accent hover:shadow-sm`;
+
+function Arrow() {
+  return (
+    <span
+      aria-hidden="true"
+      className="inline-block transition-transform duration-150 group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5 group-focus-visible/link:-translate-y-0.5 group-focus-visible/link:translate-x-0.5"
+    >
+      ↗
+    </span>
+  );
+}
 
 function Section({ id, title, children }: { id: string; title: string; children: React.ReactNode }) {
   return (
-    <section id={id} aria-labelledby={`${id}-title`} className="border-t border-line py-12 sm:py-14">
+    <section id={id} aria-labelledby={`${id}-title`} className="reveal border-t border-line py-12 sm:py-14">
       <h2 id={`${id}-title`} className="mb-6 text-sm font-semibold uppercase tracking-[0.14em] text-muted">
         {title}
       </h2>
@@ -34,7 +49,7 @@ function Header({ c }: { c: Content }) {
           <ul className="hidden items-center gap-5 sm:flex">
             {items.map(([id, label]) => (
               <li key={id}>
-                <a href={`#${id}`} className="transition-colors hover:text-text">
+                <a href={`#${id}`} className="nav-link transition-colors hover:text-text">
                   {label}
                 </a>
               </li>
@@ -55,7 +70,7 @@ function Header({ c }: { c: Content }) {
 
 function Hero({ c }: { c: Content }) {
   return (
-    <section aria-labelledby="hero-title" className="py-14 sm:py-20">
+    <section aria-labelledby="hero-title" className="hero-in py-14 sm:py-20">
       <div className="flex flex-col gap-8 sm:flex-row sm:items-center">
         <Image
           src="/images/guido.jpg"
@@ -75,11 +90,7 @@ function Hero({ c }: { c: Content }) {
       </div>
       <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted">{c.hero.tagline}</p>
       <div className="mt-8 flex flex-wrap gap-3">
-        <a
-          href={c.cvPdf}
-          download
-          className="rounded-lg bg-accent px-4 py-2.5 text-sm font-semibold text-accent-fg transition-opacity hover:opacity-90"
-        >
+        <a href={c.cvPdf} download className={btnPrimary}>
           {c.hero.downloadCv}
         </a>
         {(
@@ -93,7 +104,7 @@ function Hero({ c }: { c: Content }) {
             key={label}
             href={href}
             {...(href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-            className="rounded-lg border border-line bg-surface px-4 py-2.5 text-sm font-semibold transition-colors hover:border-accent"
+            className={btnSecondary}
           >
             {label}
           </a>
@@ -108,7 +119,7 @@ function RoleItem({ role, more }: { role: Role; more: string }) {
   const hidden = role.collapseAfter ? role.bullets.slice(role.collapseAfter) : [];
   const bulletList = "list-disc space-y-2 pl-5 leading-relaxed marker:text-accent";
   return (
-    <article className="relative before:absolute before:-left-7 before:top-2 before:h-2 before:w-2 before:rounded-full before:bg-accent before:content-['']">
+    <article className="relative before:absolute before:-left-7 before:top-2 before:h-2 before:w-2 before:rounded-full before:bg-accent before:transition-shadow before:duration-200 before:content-[''] hover:before:ring-4 hover:before:ring-accent-soft">
       <h3 className="text-lg font-semibold tracking-tight">
         {role.title} <span className="text-muted">· {role.company}</span>
       </h3>
@@ -139,27 +150,32 @@ function RoleItem({ role, more }: { role: Role; more: string }) {
 
 function ProjectCard({ p, techLabel }: { p: Project; techLabel: string }) {
   return (
-    <article className="flex flex-col overflow-hidden rounded-xl border border-line bg-surface md:flex-row">
-      <Image
-        src={p.image}
-        alt={p.imageAlt}
-        width={1280}
-        height={800}
-        className="aspect-[16/10] w-full border-b border-line object-cover object-top md:aspect-auto md:w-1/2 md:border-b-0 md:border-r"
-      />
+    <article className="group/card flex flex-col overflow-hidden rounded-xl border border-line bg-surface transition duration-200 hover:-translate-y-0.5 hover:border-accent/50 hover:shadow-lg hover:shadow-black/5 md:flex-row">
+      <div className="relative aspect-[16/10] overflow-hidden border-b border-line md:aspect-auto md:w-1/2 md:border-b-0 md:border-r">
+        <Image
+          src={p.image}
+          alt={p.imageAlt}
+          width={1280}
+          height={800}
+          className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-500 ease-out group-hover/card:scale-[1.03]"
+        />
+      </div>
       <div className="flex flex-1 flex-col p-5 sm:p-6">
         <p className="text-xs font-semibold uppercase tracking-wider text-muted">{p.badge}</p>
         <h3 className="mt-1 text-lg font-semibold tracking-tight">{p.name}</h3>
         <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">{p.summary}</p>
         <ul className="mt-4 flex flex-wrap gap-1.5" aria-label={techLabel}>
           {p.tags.map((t) => (
-            <li key={t} className="rounded-md bg-accent-soft px-2 py-1 text-xs font-medium text-accent">
+            <li
+              key={t}
+              className="cursor-default rounded-md bg-accent-soft px-2 py-1 text-xs font-medium text-accent transition duration-150 hover:-translate-y-px hover:bg-accent hover:text-accent-fg"
+            >
               {t}
             </li>
           ))}
         </ul>
-        <a href={p.href} target="_blank" rel="noopener noreferrer" className={`mt-4 text-sm font-semibold ${linkClass}`}>
-          {p.hrefLabel} ↗
+        <a href={p.href} target="_blank" rel="noopener noreferrer" className={`mt-4 w-fit text-sm font-semibold ${linkClass}`}>
+          {p.hrefLabel} <Arrow />
         </a>
       </div>
     </article>
@@ -200,11 +216,11 @@ export function Portfolio({ c }: { c: Content }) {
             ))}
           </div>
           <h3 className="mb-4 mt-12 text-base font-semibold">{c.projects.othersTitle}</h3>
-          <ul className="divide-y divide-line border-y border-line">
+          <ul className="dim-siblings divide-y divide-line border-y border-line">
             {c.projects.others.map((o) => (
-              <li key={o.name} className="grid gap-1 py-4 sm:grid-cols-[11rem_1fr] sm:gap-6">
-                <a href={o.href} target="_blank" rel="noopener noreferrer" className={`font-semibold ${linkClass}`}>
-                  {o.name} ↗
+              <li key={o.name} className="grid gap-1 py-4 transition-opacity duration-200 sm:grid-cols-[11rem_1fr] sm:gap-6">
+                <a href={o.href} target="_blank" rel="noopener noreferrer" className={`w-fit font-semibold ${linkClass}`}>
+                  {o.name} <Arrow />
                 </a>
                 <p className="text-sm leading-relaxed text-muted">{o.summary}</p>
               </li>
@@ -220,7 +236,10 @@ export function Portfolio({ c }: { c: Content }) {
                 <dd>
                   <ul className="flex flex-wrap gap-1.5">
                     {g.items.map((i) => (
-                      <li key={i} className="rounded-md border border-line bg-surface px-2.5 py-1 text-sm">
+                      <li
+                        key={i}
+                        className="cursor-default rounded-md border border-line bg-surface px-2.5 py-1 text-sm transition duration-150 hover:-translate-y-0.5 hover:border-accent hover:bg-accent-soft hover:text-accent"
+                      >
                         {i}
                       </li>
                     ))}
@@ -236,26 +255,13 @@ export function Portfolio({ c }: { c: Content }) {
         <Section id="contact" title={c.contact.title}>
           <p className="max-w-xl text-lg leading-relaxed">{c.contact.text}</p>
           <div className="mt-6 flex flex-wrap gap-3">
-            <a
-              href={`mailto:${SITE.email}`}
-              className="rounded-lg bg-accent px-4 py-2.5 text-sm font-semibold text-accent-fg transition-opacity hover:opacity-90"
-            >
+            <a href={`mailto:${SITE.email}`} className={btnPrimary}>
               {c.contact.email}
             </a>
-            <a
-              href={SITE.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-lg border border-line bg-surface px-4 py-2.5 text-sm font-semibold transition-colors hover:border-accent"
-            >
+            <a href={SITE.linkedin} target="_blank" rel="noopener noreferrer" className={btnSecondary}>
               LinkedIn
             </a>
-            <a
-              href={SITE.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-lg border border-line bg-surface px-4 py-2.5 text-sm font-semibold transition-colors hover:border-accent"
-            >
+            <a href={SITE.github} target="_blank" rel="noopener noreferrer" className={btnSecondary}>
               GitHub
             </a>
           </div>
